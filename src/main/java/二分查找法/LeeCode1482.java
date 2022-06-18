@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 /**
  * 制作 m 束花所需的最少天数
- * LeetCode 1482
+ * LeeCode 1482
  * 难度 ： 中等
  */
 class LeeCode1482 {
     public int minDays(int[] bloomDay, int m, int k) {
 
-        if( m > bloomDay.length / k) return -1; // 此时无论如何都制作不出来m束花
+        if (m > bloomDay.length / k) return -1; // 此时无论如何都制作不出来m束花
 
         // 只要 m <= bloomDay.length / k, 成立，无论如何都能制作出来
         // 调用两次stream()方法求最值的效率较低，可以使用常规方法替代！
@@ -18,17 +18,17 @@ class LeeCode1482 {
         int high = Arrays.stream(bloomDay).max().getAsInt(); // 花开的最大天数
 
         // 如果可以制作m束花，天数一定在low和high之间，因此使用二分查找
-        while(low < high){
-            int mid = low + (high-low)/2;
-            if(make(bloomDay,m,k,mid)){
+        while (low < high) {
+            int mid = low + (high - low) / 2;
+            if (make(bloomDay, m, k, mid)) {
                 high = mid;
-            }else low = mid+1;
+            } else low = mid + 1;
         }
         return low;
-        
+
     }
 
-    public boolean make(int[] bloomDay, int m, int k,int days){
+    public boolean make(int[] bloomDay, int m, int k, int days) {
         int flowers = 0; // 代表可用的花的个数
         int makeFlowers = 0; // 代表当前天数days可以制作出的花的数量
         int n = bloomDay.length;
