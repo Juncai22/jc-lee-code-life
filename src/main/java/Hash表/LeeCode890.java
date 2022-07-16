@@ -9,7 +9,7 @@ import java.util.List;
  * LeeCode 890
  * 难度 ： 中等
  */
-public class LeeCoded890 {
+public class LeeCode890 {
 
     public static List<String> findAndReplacePattern(String[] words, String pattern) {
         //当做返回当量
