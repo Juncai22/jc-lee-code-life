@@ -13,7 +13,7 @@ import java.util.List;
 public class LeeCode15TOCHANGE {
 
     public static void main(String[] args) {
-        threeSum(new int[]{-1, 1, 0, 0});
+
     }
 
     public static List<List<Integer>> threeSum(int[] nums) {
