@@ -1,4 +1,4 @@
-package 竞赛题.第308场周赛;
+package 竞赛题;
 
 
 import java.util.ArrayList;

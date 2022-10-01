@@ -1,9 +1,8 @@
 package Hash表;
 
 
-import java.util.HashMap;
-import java.util.Map;
 
+import java.util.*;
 /**
  * 423. 从英文中重建数字
  * LeeCode 423

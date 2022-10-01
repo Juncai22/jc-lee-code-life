@@ -12,6 +12,17 @@ import java.util.TreeMap;
  */
 public class LeeCode1296 {
 
+    public static void main(String[] args) {
+        String a="My field1";
+        String b="My field1";
+        String c=new String("My field1");
+        String d=new String("My field1");
+        System.out.println(a==b);
+        System.out.println(a==c);
+        System.out.println(a==d);
+        System.out.println(c==d);
+    }
+
 
     public boolean isPossibleDivide(int[] nums, int k) {
         //首先定义一个可排序的map
