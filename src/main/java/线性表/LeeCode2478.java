@@ -1,4 +1,4 @@
-package 数学思维2;
+package 线性表;
 
 
 /**

@@ -2,6 +2,7 @@ package 前缀和;
 
 
 import java.util.Arrays;
+import java.util.TreeSet;
 
 /**
  * 1906. 查询差绝对值的最小值
@@ -11,9 +12,16 @@ import java.util.Arrays;
 public class LeeCode1906TOHCANGE {
 
     public static void main(String[] args) {
-        int[] nums = {4, 5, 2, 2, 7, 10};
-        int[][] price = {{2, 3}, {0, 2}, {0, 5}, {3, 5}};
-        minDifference(nums, price);
+        TreeSet<Integer> set = new TreeSet<Integer>();
+        TreeSet<Integer> subSet = new TreeSet<Integer>();
+        for(int i=606;i<613;i++){
+            if(i%2==0){
+                set.add(i);
+            }
+        }
+        subSet = (TreeSet)set.subSet(608,true,611,true);
+        set.add(609);
+        System.out.println(set+" "+subSet);
     }
 
     public static int[] minDifference(int[] nums, int[][] queries) {
